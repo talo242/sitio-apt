@@ -1,0 +1,41 @@
+// IMPORTS
+//*****************************************
+@import '../../node_modules/normalize-scss/fork-versions/default/_normalize';
+@import '../bower_components/susy/sass/_susy';
+@import '../bower_components/breakpoint-sass/stylesheets/_breakpoint';
+
+// VARIABLES
+//*****************************************
+
+@import "partials/variables";
+@import "partials/grids";
+@import "partials/layout";
+
+// MIXINS
+//*****************************************
+@import "partials/mixins";
+
+
+// ELEMENTOS BASE
+//*****************************************
+@import "partials/base";
+
+
+// ELEMENTOS UI
+//*****************************************
+
+// SECCIONES
+//*****************************************
+.container {
+  h1{
+    color:$rojo;
+    }
+  }
+
+.page-wrap {
+  @include container;
+  width: $container;
+  }
+.nav {
+  @include full;
+}
