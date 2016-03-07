@@ -1,24 +1,24 @@
 @import '../bower_components/susy/sass/_susy';
 
 $susy: (
-  columns: 12, 
-  gutters: 1,
+  columns: 12,
+  gutters: 1/4,
   output: float,
-  gutter-position: after,
+  gutter-position: split,
   math: fluid,
   flow: ltr,
   container: auto,
   container-position: center,
   last-flow: to,
   global-box-sizing: border-box,
-  
-  debug: (
-    image: show,
-    color: rgba(#656, .25),
-    output: background,
-    toggle: top right,
-  ),
-  
+
+  // debug: (
+  //   image: show,
+  //   color: rgba(#656, .25),
+  //   output: foreground,
+  //   toggle: top right,
+  // ),
+
   use-custom: (
     background-image: true,
     background-options: false,
@@ -28,4 +28,4 @@ $susy: (
   )
 );
 
-$nav_susy_layout: layout(12 0 fluid float inside);
+// $nav_susy_layout: layout(12 0 fluid float inside);

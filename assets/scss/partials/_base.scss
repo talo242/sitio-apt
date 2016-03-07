@@ -1,20 +1,16 @@
 body {
-	background-color: $blanco;
-  font-family: $sans-serif;
-  background-color: $gris-claro;
+  font-family: $parrafo;
+  font-size: $main-font-size;
 }
 
 h1 {
 	color: $carbon;
+  font-family: $titular;
+  font-weight: $bold;
 }
 
-h2 {
+h2, h3, h4 {
 	color: $gris-oscuro;
-}
-
-h3 {
-	color: $gris-oscuro;
-}
-h4 {
-	color: $gris-oscuro;
+  font-family: $titular;
+  font-weight: $regular;
 }

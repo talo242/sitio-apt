@@ -1,0 +1,84 @@
+#container-srv {
+  background-color: white;
+  margin-top: 2em;
+  padding: 1em;
+}
+.servicio {
+  border: 1px solid $gris-claro;
+  border-radius: 10px;
+  margin-top: 1em;
+  padding: 1em 0.5em 0.5em;
+  text-align: center;
+  transition: box-shadow 0.1s linear;
+  img {
+    display: block;
+    max-width: 50%;
+    margin: auto;
+  }
+  h2 {
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  a {
+    background-color: $gris-oscuro;
+    color: white;
+    display: block;
+    line-height: 1.5em;
+    margin: 0 auto 2em auto;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    width: 70%
+  }
+}
+.servicio:hover {
+  box-shadow: 0 0 15px $gris-claro;
+  transition: box-shadow 0.1s linear;
+}
+@mixin color($color) {
+  border: 2px solid lighten($color, 35%);
+  a {
+    background-color: $color;
+    &:hover {
+      background-color: lighten($color, 3%);
+    }
+    &:active {
+      box-shadow: inset 0 5px 5px darken($color, 3%);
+    }
+  }
+}
+.servicio:nth-child(1) {
+  @include color($verde);
+}
+.servicio:nth-child(2) {
+  @include color($naranja);
+}
+.servicio:nth-child(3) {
+  @include color($celeste);
+}
+.servicio:nth-child(4) {
+  @include color($morado);
+}
+
+//BREAKPOINTS
+.servicio-active {
+ box-shadow: 0 0 15px $gris-claro;
+ transition: box-shadow 0.1s linear;
+}
+@include breakpoint(600px) {
+  #container-srv {
+  @include container;
+  }
+  .servicio {
+    @include span(6);
+    height: 455px;
+  }
+}
+@include breakpoint($tablet) {
+  #container-srv {
+  @include container($container);
+  }
+  .servicio {
+    @include span(3);
+  }
+}

@@ -1,8 +1,8 @@
 # README #
 
-### ¿Qué es este repositorio? ###
+### ASOCIACIÓN PARA TODOS ###
 
-'Gulp Build' es un repositorio que contiene todos los elementos esenciales para poder construir sitios web utilizando el sistema de automatización Gulp
+Este repositorio está construido sobre 'Gulp Build'. Es un proyecto para la organización no lucrativa 'Asociación para todos'.
 
 * Versión 0.1
 
@@ -16,6 +16,7 @@
 * [gulp-rename](https://www.npmjs.com/package/gulp-rename)
 * [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
 * [browser-sync](https://www.npmjs.com/package/browser-sync)
+* [gulp-jade](https://github.com/phated/gulp-jade)
 
 ### Instalación: ###
 
@@ -23,11 +24,11 @@
 
 ```
 #!git
-git clone https://talo242@bitbucket.org/talo242/gulp-build.git
+git clone https://talo242@bitbucket.org/talo242/sitio-apt.git
 
 ```
 
-* Instalar las dependencias: 
+* Instalar las dependencias:
 
 ```
 npm install

@@ -26,16 +26,5 @@
 
 // SECCIONES
 //*****************************************
-.container {
-  h1{
-    color:$rojo;
-    }
-  }
 
-.page-wrap {
-  @include container;
-  width: $container;
-  }
-.nav {
-  @include full;
-}
+@import "sections/servicios";

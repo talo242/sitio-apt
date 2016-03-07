@@ -5,16 +5,27 @@
 // LAYOUT
 $container: 1024px;
 
+// BREAKPOINTS
+$desktop: 1280px;
+$tablet: 1024px;
+$mobile: 640px;
+
 // COLOR
 $carbon: #242424;
 $gris-oscuro: #414141;
 $gris-claro: #d8d8d8;
-$azul: #1c56c3;
 $rojo: #db1634;
-$verde: #3f8812;
-$blanco: #fff;
+
+// PALETA DE COLORES APT
+$naranja: #ff6a00;
+$verde: #77bb1f;
+$morado: #8b189b;
+$celeste: #00a0df;
+
 
 // TYPOGRAPHY
 $main-font-size: 16px;
-$sans-serif: Helvetica, Arial, sans-serif;
-$serif: Times, serif;
+$titular: 'Montserrat', Helvetica, Arial, sans-serif;
+$parrafo: 'Noto Sans', Helvetica, Arial, sans-serif;
+$bold: 700;
+$regular: 400;

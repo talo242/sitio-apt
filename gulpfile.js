@@ -12,6 +12,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var jade = require('gulp-jade');
 var htmlmin = require('gulp-html-minifier');
+// Minificar SVG
+var svgmin = require('gulp-svgmin');
 
 // /////////////////////////////////////////////
 // Log Errors
@@ -54,14 +56,14 @@ gulp.task('sass', function(){
 // /////////////////////////////////////////////
 // HTML Task
 // /////////////////////////////////////////////
-//gulp.task('html', function() {
+// gulp.task('html', function() {
 //  gulp.src('assets/**/*.html')
 //  .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
 //  .pipe(gulp.dest('build/'))
 //  .pipe(reload({stream:true}));
-//})
+// })
 gulp.task('html', function(){
-	return gulp.src('assets/*.jade')
+	return gulp.src(['assets/jade/*.jade', '!assets/jade/partials/*.jade'])
 		.pipe(plumber())
 		.pipe(jade())
 		.pipe(gulp.dest('build/'))
@@ -82,11 +84,19 @@ gulp.task('browser-sync', function() {
 // /////////////////////////////////////////////
 // Watch Task
 // /////////////////////////////////////////////
-gulp.task ('watch', function(){
+gulp.task('watch', function() {
 	gulp.watch('assets/scss/**/*.scss', ['sass']);
 	gulp.watch('assets/js/**/*.js', ['scripts']);
-  	gulp.watch('assets/*.jade', ['html']);
+  gulp.watch('assets/jade/*.jade', ['html']);
 });
 
+// /////////////////////////////////////////////
+// SVG Optimizer
+// /////////////////////////////////////////////
+gulp.task('svg', function() {
+	return gulp.src('assets/img/*.svg')
+	.pipe(svgmin())
+	.pipe(gulp.dest('build/img/'));
+});
 
 gulp.task('default', ['scripts', 'sass', 'html', 'browser-sync', 'watch']);
