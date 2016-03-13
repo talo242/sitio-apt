@@ -13,7 +13,8 @@ $mobile: 640px;
 // COLOR
 $carbon: #242424;
 $gris-oscuro: #414141;
-$gris-claro: #d8d8d8;
+$gris-medio: lighten($gris-oscuro, 20%);
+$gris-claro: #e5e5e4;
 $rojo: #db1634;
 
 // PALETA DE COLORES APT
