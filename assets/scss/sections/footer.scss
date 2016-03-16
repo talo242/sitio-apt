@@ -1,0 +1,81 @@
+footer {
+  font-size: 0.8em;
+  width: 100%;
+  background-color: $gris-oscuro;
+  .footer-sect {
+    text-align: center;
+    border-bottom: solid 1px lighten($gris-oscuro, 5%);
+    padding: 1.5em;
+    i {
+      display: block;
+      line-height: 1.2em;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  h3 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+  }
+  a {
+    color: darken($gris-claro, 3%);
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+  #footer-after {
+    background-color: white;
+    border-bottom: 5px solid $verde;
+    color: $gris-oscuro;
+    text-align: center;
+    padding-top: 2em;
+    .logo-footer {
+      height: 120px;
+    }
+    p {
+      margin: 1em auto;
+      max-width: 440px;
+      &:first-child {
+        border-bottom: 1px solid $gris-oscuro;
+        padding-bottom: 1em;
+      }
+    }
+    a {
+      color: $gris-oscuro;
+      &:hover {
+        text-decoration: underline;
+        // border-bottom: solid 1px $gris-oscuro;
+      }
+    }
+    i {
+      color: red;
+      margin: 0 0.3em;
+    }
+  }
+  .copyright {
+    p:first-child {
+      text-align: left;
+    }
+    img {
+      float: left;
+      margin: 1.5em 1em 0 1em;
+    }
+  }
+}
+@include breakpoint ($tablet) {
+  footer {
+    .footer-sect {
+      @include span(3);
+      border-bottom: none;
+      border-left: solid 1px lighten($gris-oscuro, 5%);
+      height: 300px;
+      padding: 0 2em;
+      &:last-child {
+        border-right: solid 1px lighten($gris-oscuro, 5%);
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+#como-apoyamos {
+  @include container(100%);
+  background-color: #0d9e49;
+}
+.apoyamos-desc {
+  padding: 1em;
+  h2 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+}
+@include breakpoint ($mobile) {
+  .apoyamos-desc{
+    @include span(6);
+  }
+}

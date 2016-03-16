@@ -7,9 +7,7 @@
 }
 #container-srv {
   background-color: white;
-  margin-top: 2em;
   padding: 1em;
-  height: 1000px;
 }
 .servicio {
   @extend %clearfix;
@@ -25,7 +23,7 @@
     max-height: 25%;
     margin: auto;
   }
-  h2 {
+  h3 {
     font-size: 1.2em;
     text-align: center;
     text-transform: uppercase;
@@ -89,7 +87,8 @@
 }
 @include breakpoint($tablet) {
   #container-srv {
-  @include container($container);
+    padding: 0;
+    @include container($container);
   }
   .servicio {
     @include span(3);

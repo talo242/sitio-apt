@@ -5,3 +5,7 @@ html {
 * {
   box-sizing: border-box;
 }
+.s-container {
+  @include container($container);
+  padding: 5em 0;
+}

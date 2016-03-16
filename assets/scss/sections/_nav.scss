@@ -29,7 +29,7 @@ nav {
     margin: 0.5em 1em;
   }
   .navbar {
-    background-color: $gris-claro;
+    background-color: rgba($gris-claro, 0.97);
     box-shadow: 0 0px 10px rgba($gris-oscuro, 0.75);
     font-family: $titular;
     height: 70px;
@@ -37,6 +37,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 3;
+    transition: top 0.3s ease-in-out;
   }
   .menu-mobile {
     @extend %clearfix;
@@ -141,29 +142,38 @@ nav {
   }
 
 }
+nav .nav-up {
+  top: -100px;
+}
+nav .nav-down {
+  top: 0;
+}
 ////////////////////
 //BREAKPOINTS
 ////////////////////
-@include breakpoint($tablet) {
+@include breakpoint(1080px) {
+  nav .navbar {
+    height: 100px;
+  }
   .btn-menu-toggle {
     display: none;
   }
   nav img {
+    height: 4em;
     float: left;
-    margin-left: 3em;
+    margin: 1em 5em;
   }
   nav .menu-mobile {
-  // @include full;
     background-color: transparent;
     box-shadow: none;
     float: right;
     transition: none;
-    right: -300px;
-    top: 0;
+    right: -250px;
+    top: 20px;
     margin: 0;
     overflow: visible;
     position: relative;
-    width: auto;
+    width: 795px;
     z-index: 3;
     display: block;
     ul {
@@ -185,9 +195,9 @@ nav {
       display: block;
     }
     .nav-second {
-      background: $gris-claro;
-      position: fixed;
-      top: 70px;
+      background: rgba($gris-claro, 0.97);
+      position: absolute;
+      top: 80px;
       box-shadow: 0 4px 5px rgba($gris-oscuro, 0.2);
       left: -25px;
       ul {

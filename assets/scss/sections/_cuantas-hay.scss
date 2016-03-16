@@ -1,0 +1,29 @@
+#cuantas-hay {
+  padding: 1em;
+  width: 100%;
+  background-color: $celeste;
+  .mapa-img {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .mapa-descripcion {
+    h2, p {
+      color: white
+    }
+  }
+  .mapa-cta {
+    @include btn-cta($morado);
+    margin-top: 2em;
+  }
+}
+@include breakpoint($mobile) {
+  #cuantas-hay {
+    .mapa-img {
+      @include span(6 of $container);
+    }
+    .mapa-descripcion {
+      @include span(6 of $container);
+    }
+  }
+}

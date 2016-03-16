@@ -21,3 +21,20 @@
         }
     }
 }
+@mixin btn-cta($color) {
+  background-color: $color;
+  color: white;
+  padding: 0.5em 1em;
+  display: table;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  font-weight: $regular;
+  margin-top: 3em;
+  &:hover {
+    background-color: lighten($color, 3%);
+    box-shadow: 0 1px 2px darken($color, 5%);
+  }
+  &:active {
+    box-shadow: inset 0 5px 5px darken($color, 3%);
+  }
+}

@@ -1,0 +1,67 @@
+.hero {
+  @include container(100%);
+  background-image: url(../img/hero-s.jpg);
+  padding: 0;
+  margin: 0;
+  height: 640px;
+  .hero-cta {
+    @include btn-cta($verde);
+  }
+}
+.hero-text {
+  padding: 4em 0.5em 0 0.5em;
+
+  h1, p {
+    color: white;
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+  .conoce-mas {
+    display: none;
+    color: rgba(white, 0.5);
+    font-style: italic;
+    margin-top: 5em;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.2s linear;
+    i {
+      display: block;
+      line-height: 1.5em;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+////////////////////
+//BREAKPOINTS
+////////////////////
+@include breakpoint ($mobile) {
+  .hero {
+    .conoce-mas {
+      display: block;
+    }
+  }
+  .hero-text {
+    width: 80%;
+    padding: 8em 5em;
+  }
+}
+@include breakpoint ($tablet) {
+  .hero {
+    background-image: url(../img/hero-b.jpg);
+    height: 700px;
+  }
+  .hero-text {
+    font-size: 1.1em;
+    @include span(7 of $container);
+    margin: auto;
+    float: none;
+    padding: 8em 0 0 0;
+    p {
+      margin: 2.5em 0;
+    }
+  }
+
+}

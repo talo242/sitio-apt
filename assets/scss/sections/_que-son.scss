@@ -1,0 +1,31 @@
+#que-son {
+  .er-img {
+    display: block;
+    margin: auto;
+    width: 60%;
+  }
+  .er-descripcion {
+    padding: 1em;
+    h2 {
+      color: $morado;
+    }
+    .er-cta {
+      @include btn-cta($naranja);
+      padding: 0.5em 2em;
+    }
+  }
+}
+@include breakpoint ($mobile) {
+  #que-son {
+    .er-img {
+      @include span(3 at 2 of 12);
+      float: left;
+      margin-top: 45px;
+      margin-left: 10%;
+    }
+    .er-descripcion {
+      @include span(6 at 7 of 12);
+      margin-left: 3em;
+    }
+  }
+}

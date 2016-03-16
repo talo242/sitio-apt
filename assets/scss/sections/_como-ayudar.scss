@@ -1,0 +1,60 @@
+#como-ayudar {
+  padding: 1em;
+}
+.ayudar-info {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  img {
+    border-radius: 300px;
+    width: 85%;
+    margin: auto;
+  }
+}
+.ayudar-cta {
+  $ayudar-i: layout(12 1 float);
+  @include container($ayudar-i);
+  background-color: $gris-claro;
+  i {
+    @include span(4 of $ayudar-i);
+    color: lighten($gris-claro, 8%);
+    padding: 1rem 0;
+    font-size: 3em;
+    text-align: center;
+  }
+  p {
+    display: block;
+    padding: 0 1.5em ;
+  }
+  a {
+    @include btn-cta($verde);
+    box-shadow: 0 0 10px rgba(black, 0.25);
+    display: block;
+    line-height: 2em;
+    margin-top: 1em;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+#pre-footer {
+  background-image: url(../img/pre-foot.jpg);
+}
+/////////////////////
+//BREAKPOINS
+/////////////////////
+@include breakpoint($mobile) {
+  #como-ayudar {
+    padding: 0;
+  }
+  .ayudar-info {
+    width: 50%;
+    img {
+    width: 70%;
+    margin-bottom: 1.5em;
+    }
+  }
+  .ayudar-cta {
+    width: 50%;
+    margin: auto;
+  }
+}
