@@ -3,7 +3,7 @@
   width: 100%;
   background-color: $celeste;
   .mapa-img {
-    width: 80%;
+    width: 60%;
     display: block;
     margin: auto;
   }
@@ -21,9 +21,23 @@
   #cuantas-hay {
     .mapa-img {
       @include span(6 of $container);
+      margin-top: 2em;
     }
     .mapa-descripcion {
       @include span(6 of $container);
+    }
+  }
+}
+@include breakpoint($tablet) {
+  #cuantas-hay {
+    .mapa-img {
+      @include span(6 of $container);
+      margin-top: 2em;
+      img {
+        height: 345px;
+        margin-left: 2em;
+
+      }
     }
   }
 }

@@ -15,4 +15,18 @@
   .apoyamos-desc{
     @include span(6);
   }
+  .apoyamos-img {
+    img {
+      margin-top: 1em;
+      margin-left: 2em;
+    }
+  }
+}
+@include breakpoint($tablet) {
+  .apoyamos-img {
+    img {
+      margin-top: 1em;
+      margin-left: 5em;
+    }
+  }
 }

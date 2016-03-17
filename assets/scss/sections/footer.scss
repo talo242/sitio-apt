@@ -37,17 +37,14 @@ footer {
     }
     p {
       margin: 1em auto;
-      max-width: 440px;
       &:first-child {
-        border-bottom: 1px solid $gris-oscuro;
-        padding-bottom: 1em;
+
       }
     }
     a {
       color: $gris-oscuro;
       &:hover {
         text-decoration: underline;
-        // border-bottom: solid 1px $gris-oscuro;
       }
     }
     i {
@@ -56,12 +53,22 @@ footer {
     }
   }
   .copyright {
-    p:first-child {
-      text-align: left;
-    }
-    img {
-      float: left;
-      margin: 1.5em 1em 0 1em;
+    .license {
+      @include container(100%);
+      max-width: 500px;
+      margin: auto;
+      border-bottom: 1px solid $gris-oscuro;
+      p {
+        @include span(9 at 4 of 12);
+        text-align: left;
+      }
+      .license-img {
+        @include span(3 of 12);
+        img {
+          width: 100%;
+          padding-top: 1.5em;
+        }
+      }
     }
   }
 }

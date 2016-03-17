@@ -12,8 +12,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var jade = require('gulp-jade');
 var htmlmin = require('gulp-html-minifier');
-// Minificar SVG
-var svgmin = require('gulp-svgmin');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 // /////////////////////////////////////////////
 // Log Errors
@@ -82,21 +82,27 @@ gulp.task('browser-sync', function() {
 });
 
 // /////////////////////////////////////////////
+// Image Optimizer
+// /////////////////////////////////////////////
+
+gulp.task('imagemin', function() {
+	return gulp.src('assets/img/*')
+		.pipe(imagemin({
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant({quality:'65'})]
+		}))
+		.pipe(gulp.dest('build/img/'));
+});
+
+// /////////////////////////////////////////////
 // Watch Task
 // /////////////////////////////////////////////
 gulp.task('watch', function() {
 	gulp.watch('assets/scss/**/*.scss', ['sass']);
 	gulp.watch('assets/js/**/*.js', ['scripts']);
   gulp.watch('assets/jade/**/*.jade', ['html']);
+  gulp.watch('assets/img/*', ['imagemin']);
 });
 
-// /////////////////////////////////////////////
-// SVG Optimizer
-// /////////////////////////////////////////////
-gulp.task('svg', function() {
-	return gulp.src('assets/img/*.svg')
-	.pipe(svgmin())
-	.pipe(gulp.dest('build/img/'));
-});
-
-gulp.task('default', ['scripts', 'sass', 'html', 'browser-sync', 'watch']);
+gulp.task('default', ['scripts', 'sass', 'html', 'browser-sync', 'imagemin', 'watch']);

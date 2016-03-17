@@ -23,12 +23,17 @@
     text-align: center;
   }
   p {
+    color: lighten($gris-oscuro, 15%);
     display: block;
-    padding: 0 1.5em ;
+    font-style: italic;
+    margin: 0;
+    padding: 1.5em 3em;
+    text-align: center;
   }
   a {
     @include btn-cta($verde);
     box-shadow: 0 0 10px rgba(black, 0.25);
+    clear: both;
     display: block;
     line-height: 2em;
     margin-top: 1em;
