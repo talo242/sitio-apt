@@ -1,0 +1,42 @@
+#info-page-nav {
+  width: 100%;
+  .s-container {
+    padding: 2em 0;
+  }
+  p {
+    text-align: center;
+  }
+  .info-nav {
+    border: solid 1px $morado;
+    box-sizing: content-box;
+    color: $morado;
+    display: inline;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: background-color 0.1s linear;
+    &:hover {
+      background-color: $morado;
+      color: white;
+    }
+    i {
+      font-size: 0.8em;
+    }
+    span {
+      display: none;
+      @include breakpoint($mobile) {
+        display: inline;
+      }
+    }
+  }
+  .info-prev {
+    float: left;
+    margin-top: -9px;
+  }
+  .info-menu {
+    margin-top: 10px;
+  }
+  .info-next {
+    float: right;
+    margin-top: -9px;
+  }
+}

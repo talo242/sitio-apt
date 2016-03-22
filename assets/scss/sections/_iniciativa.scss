@@ -1,0 +1,19 @@
+#iniciativa {
+  background-image: url(../img/iniciativa.jpg);
+  background-size: cover;
+  .iniciativa-info {
+    h2, p {
+      color: white;
+    }
+    a {
+      @include btn-cta($naranja);
+    }
+  }
+}
+@include breakpoint($mobile) {
+  #iniciativa {
+    .s-container {
+      max-width: 45%
+    }
+  }
+}

@@ -1,7 +1,7 @@
 footer {
   font-size: 0.8em;
   width: 100%;
-  background-color: $gris-oscuro;
+  @include linear-gradient(225deg, darken($gris-oscuro, 7%), $gris-oscuro);
   .footer-sect {
     text-align: center;
     border-bottom: solid 1px lighten($gris-oscuro, 5%);

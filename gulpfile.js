@@ -65,7 +65,7 @@ gulp.task('sass', function(){
 gulp.task('html', function(){
 	return gulp.src(['assets/jade/*.jade', '!assets/jade/partials/*.jade'])
 		.pipe(plumber())
-		.pipe(jade())
+		.pipe(jade({pretty: true}))
 		.pipe(gulp.dest('build/'))
 		.pipe(reload({stream:true}));
 });
@@ -92,7 +92,8 @@ gulp.task('imagemin', function() {
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant({quality:'65'})]
 		}))
-		.pipe(gulp.dest('build/img/'));
+		.pipe(gulp.dest('build/img/'))
+		.pipe(reload({stream:true}));
 });
 
 // /////////////////////////////////////////////

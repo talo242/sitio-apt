@@ -1,7 +1,12 @@
+html {
+  padding: 0;
+}
 body {
   font-family: $parrafo;
   font-size: $main-font-size;
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {

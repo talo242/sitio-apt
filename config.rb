@@ -10,5 +10,5 @@ fonts_dir = "fonts"
 javascript_dir = "js"
 line_comments = false
 preferred_syntax = :scss
-output_style = :expanded
+output_style = :compressed
 relative_assets = true

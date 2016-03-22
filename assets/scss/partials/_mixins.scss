@@ -1,24 +1,25 @@
 // ***********************************
 // CUSTOM FONTS
 // ***********************************
-
-@mixin font-face($style-name, $file, $family, $category:"") {
-    $filepath: "fonts/" + $family + "/" + $file;
-    @font-face {
-        font-family: "#{$style-name}";
-        src: url($filepath + ".eot");
-        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+@mixin icon($position: before, $icon: false, $styles: true) {
+    @if $position == both {
+        $position: 'before, &:after';
     }
-    %#{$style-name} {
-        font: {
-            @if $category != "" {
-                family: "#{$style-name}", #{$category};
-            }
-            @else {
-                family: "#{$style-name}";
-                weight: normal;
-            }
+    // Either a :before or :after pseudo-element, or both, defaulting to :before
+    &:#{$position} {
+        @if $icon {
+            // A particular icon has been specified
+            content: "#{map-get($icons, $icon)}";
         }
+        @if $styles {
+            // Supportive icon styles required
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-family: 'Icons';
+        }
+        // Include any extra rules supplied for the pseudo-element
+        @content;
     }
 }
 @mixin btn-cta($color) {

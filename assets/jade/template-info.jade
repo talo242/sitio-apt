@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Página Informativa | Asociación Para Todos
+    include partials/head.jade
+  body
+    include partials/nav.jade
+    .page-wrap
+      .s-container
+        include info-pages/info-er.jade
+        //- h1 Esta es una página Informativa
+        //- p Esta página contendrá información que podrá ser editada en cualquier momento desde el panel de administración.
+      include partials/info-page-nav.jade
+      include partials/ayuda-footer.jade
+      include partials/footer.jade
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+    script(src="js/main.min.js")
+  

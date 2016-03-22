@@ -1,0 +1,40 @@
+.news-aside {
+  @include span(3 at 10);
+  h3 {
+    color: $celeste;
+    text-transform: uppercase;
+  }
+  ul {
+    padding: 0;
+  }
+  img {
+    width: 100%;
+  }
+  .news-categories {
+    border-top: solid 5px $celeste;
+    a {
+      color: $gris-medio;
+      display: block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      width: 100%;
+    }
+    li {
+      list-style: none;
+      border-top: solid 1px $gris-medio;
+      &:last-child {
+        border-bottom: solid 1px $gris-medio;
+      }
+      &:hover {
+        background-color: $gris-claro;
+      }
+      &:hover a {
+        color: $gris-oscuro;
+      }
+    }
+  }
+  .popular-posts {
+    border-top: solid 5px $celeste;
+    margin-top: 5em;
+  }
+}

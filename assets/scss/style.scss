@@ -2,7 +2,9 @@
 //*****************************************
 @import '../../node_modules/normalize-scss/fork-versions/default/_normalize';
 @import '../bower_components/susy/sass/_susy';
-@import '../bower_components/breakpoint-sass/stylesheets/_breakpoint';
+@import "../bower_components/breakpoint-sass/stylesheets/_breakpoint";
+@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+
 
 // VARIABLES
 //*****************************************
@@ -13,6 +15,7 @@
 
 // MIXINS
 //*****************************************
+@import "partials/icons";
 @import "partials/mixins";
 
 
@@ -23,9 +26,12 @@
 
 // ELEMENTOS UI
 //*****************************************
-
+@import "partials/ayuda-footer";
+@import "partials/page-number";
 // SECCIONES
 //*****************************************
+
+//-----Home
 
 @import "sections/hero";
 @import "sections/nav";
@@ -34,4 +40,14 @@
 @import "sections/servicios";
 @import "sections/cuantas-hay";
 @import "sections/como-ayudar";
+@import "sections/iniciativa";
 @import "sections/footer";
+
+//-----Noticias
+
+@import "sections/news-header";
+@import "sections/news-feed";
+@import "sections/news-aside";
+
+//-----Páginas informativas
+@import "sections/info-page-nav"

@@ -1,0 +1,22 @@
+#ayuda-footer {
+  width: 100%;
+  background-color: darken($gris-claro, 5%);
+  color: lighten($gris-oscuro, 25%);
+  .s-container {
+    padding: 3em 0;
+  }
+  .ayuda-footer-s {
+    @include span(6);
+  }
+  h3, a {
+    color: lighten($gris-oscuro, 25%);
+  }
+  a:hover {
+    color: lighten($gris-oscuro, 5%);
+  }
+  i {
+    font-size: 4em;
+    float: left;
+    margin:2rem 1rem;
+  }
+}
