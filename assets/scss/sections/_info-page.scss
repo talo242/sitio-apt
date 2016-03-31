@@ -1,7 +1,31 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 #info-header {
   @include container(100%);
   height: 250px;
+  background-color: $verde;
+  background-image: url(../img/header-info.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  h2 {
+    color: white;
+    @include container($container);
+    margin-top: 0;
+    padding: 8em 0 3em 0;
+  }
+}
+#er-header {
+  @include container(100%);
+  height: 250px;
   background-color: $morado;
+  background-image: url(../img/header-er.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
   h2 {
     color: white;
     @include container($container);
@@ -10,11 +34,59 @@
   }
 }
 .info-er-sc {
-  padding: 3em 0;
+  @extend %clearfix;
+  padding: 3em 1em;
   h1, h2 {
     color: $morado;
   }
+}
+.text-green {
+  border: solid 1px $verde;
+  padding: 1.5em;
+  margin: 3em 0;
+  p {
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+  }
+}
+.info-l img {
+  width: 100%;
+}
+.gen-origin-container {
+  clear: both;
+}
+.gen-origin-box {
+  color: white;
+  text-align: center;
+  padding: 1.5em;
+  margin-top: 2em;
+  height: 350px;
+  h3 {
+    color: inherit;
+  }
+  &:nth-child(1) {
+    background-color: $verde;
+  }
+  &:nth-child(2) {
+    background-color: $naranja;
+  }
+  &:nth-child(3) {
+    background-color: $celeste;
+  }
+}
+@include breakpoint($mobile) {
+  .info-er-sc {
+    padding: 3em 0;
+  }
   .info-l {
     @include span(6);
+    img {
+      padding: 0.5em;
+    }
+  }
+  .gen-origin-box {
+    @include span(4 of 12);
+    height: 300px;
   }
 }

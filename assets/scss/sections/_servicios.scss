@@ -5,7 +5,7 @@
     clear: both;
   }
 }
-#container-srv {
+#servicios {
   background-color: white;
   padding: 1em;
 }
@@ -77,7 +77,7 @@
  transition: box-shadow 0.1s linear;
 }
 @include breakpoint(600px) {
-  #container-srv {
+  #servicios{
   @include container;
   }
   .servicio {
@@ -86,7 +86,7 @@
   }
 }
 @include breakpoint($tablet) {
-  #container-srv {
+  #servicios {
     padding: 0;
     @include container($container);
   }
